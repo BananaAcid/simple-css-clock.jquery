@@ -1,0 +1,94 @@
+/** css config **/
+clock, clock minute, clock hour, clock second, clock period {
+  display: inline-block;
+}
+
+clock {
+  position: relative;
+  border-radius: 100%;
+  box-sizing: border-box;
+  
+  /* base design */
+  background-color: #ccc;
+  height: 100px;
+  width: 100px;
+}
+
+clock minute, clock hour, clock second, clock period {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%);
+}
+
+clock minute, clock hour {
+  width: 2px;
+  background-color: black;
+}
+
+clock hour {
+  height: 20%; /* length */
+}
+
+clock minute {
+  height: 40%; /* length */
+}
+
+clock second {
+  background-color: red;
+  width: 1px;
+  height: 40%; /* length */
+  transition: transform 700ms; /* optional - if your browser has rendering issues, remove this line. */
+}
+
+clock period {
+  right: 10%;
+  left: unset;
+  top: 50%;
+  transform-origin: center;
+  transform: translateY(-50%);
+  font-size: x-small;
+  padding: .2em .2em;
+  height: fit-content;
+  /* background-color: white; */
+}
+clock period[fill] {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: unset;
+  transform-origin: center;
+  border-radius: inherit;
+  border: inherit;
+}
+
+clock[period="am"] {}
+clock[period="pm"] {}
+
+/* font-size is inherited from clock */
+clock[center]:after, clock center {
+  content: attr(center) "";
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background-color: inherit;
+  transform-origin: center;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 100%;
+
+  min-width: 20%;   /* spacing */
+  min-height: 20%;  /* spacing */
+}
+
+
+
+/* manually set the clock hands
+
+clock#no2 minute {
+  transform: translateX(-50%) rotateZ(90deg);  -- translateX(-50%) is required, if you use thick hands.
+}
+*/

@@ -1,0 +1,354 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="//fiddle.jshell.net/css/normalize.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../src/simple-css-clock.jquery.css">
+    <script type="text/javascript" src="../src/simple-css-clock.jquery.js"></script>
+  </head>
+
+
+  <body>
+
+    <header>World Clocks</header>
+
+    <!-- All design styles are inline, so you know where it does what. 
+         Logic and base styles are in the stylesheet. -->
+
+    <article>
+      <section>
+        <header>Local</header>
+
+        <clock autostart>
+          <period am="" pm="PM"></period>
+          <hour></hour>
+          <minute></minute>
+        </clock>
+      </section>
+
+      <section>
+        <header>Berlin</header>
+
+        <clock autostart timezone="Europe/Berlin">
+          <period am="" pm="PM"></period>
+          <hour></hour>
+          <minute></minute>
+        </clock>
+      </section>
+
+      <section>
+        <header>Sydney</header>
+
+        <clock autostart timezone="Australia/Sydney">
+          <period am="" pm="PM"></period>
+          <hour></hour>
+          <minute></minute>
+        </clock>
+      </section>
+
+      <section>
+        <header>Jarkata</header>
+
+        <clock autostart timezone="Asia/Jakarta">
+          <period am="" pm="PM"></period>
+          <hour></hour>
+          <minute></minute>
+        </clock>
+      </section>
+
+      <section>
+        <header>Kolkata</header>
+
+        <clock autostart timezone="Asia/Kolkata">
+          <period am="" pm="PM"></period>
+          <hour></hour>
+          <minute></minute>
+        </clock>
+      </section>
+    </article>
+
+
+    <header>Styles, autostart</header>
+
+    <clock autostart>
+      <period am="AM" pm="PM"></period>
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart>
+      <period am="early" pm="late"></period>
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart center="•" style="border-radius: 10px;">
+      <period am="AM" pm="PM"></period>
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart style="width: 100px; height: 100px;">
+      <hour></hour>
+      <minute></minute>
+      <second style="background-color: transparent;">|</second>
+    </clock>
+
+    <clock autostart style="width: 100px; height: 100px;">
+      <hour></hour>
+      <minute></minute>
+      <second style="background-color: transparent;">&bull;</second>
+    </clock>
+
+    <clock autostart style="width: 100px; height: 100px;">
+      <hour style="width: 1px"></hour>
+      <minute style="width: 1px"></minute>
+      <second style="background-color: transparent;">A</second>
+    </clock>
+
+    <br>
+
+    <clock autostart style="border: 2px solid gray;">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart style="background-color: black">
+      <hour style="background-color: white"></hour>
+      <minute style="background-color: white"></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart style="background-color: transparent">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart style="background-color: transparent; border: 2px solid gray;">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart center>
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <!-- use the center for a fontawsesome letter -->
+    <clock autostart center="?">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <br>
+
+    <clock autostart center style="width: 200px; height: 200px; background-color: transparent; border: 35px solid aquamarine; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75), inset 0px 0px 10px 0px rgba(0,0,0,0.75);">
+      <hour style="background-color: darkturquoise; width: 20px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); border-radius: 0 0 10px 10px;"></hour>
+      <minute style="background-color: aquamarine; width: 20px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); border-radius: 0 0 10px 10px;"></minute>
+      <!-- second></second -->
+      <center style="background-color: aquamarine; box-shadow: 0 0 15px 0 rgba(0,0,0, .3);"></center>
+    </clock>
+
+
+    <header>using background and period</header>
+
+    <clock autostart style="background: linear-gradient(rgba(255,255,255, .7), rgba(255,255,255, .7)), url(//placeimg.com/200/200/arch);  background-size: cover;">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart style="background-image: url(//www.helpingwithmath.com/printables/worksheets/time/clockface_numbers01.gif); background-size: cover;">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+
+    <article>
+      <section>
+        <span>clock changing to AM:</span>
+
+        <clock time="10:00:10" class="periodBg">
+          <period fill></period>
+          <hour></hour>
+          <minute></minute>
+          <second></second>
+        </clock>
+        
+        <clock time="10:00:10" class="periodBg2" style="background: url(//placeimg.com/200/200/arch);  background-size: cover;">
+          <period fill></period>
+          <hour></hour>
+          <minute></minute>
+          <second></second>
+        </clock>
+      </section>
+
+      <section>
+        <span>clock changing to PM:</span>
+        
+        <clock time="20:00:10" class="periodBg">
+          <period fill></period>
+          <hour></hour>
+          <minute></minute>
+          <second></second>
+        </clock>
+        
+        <clock time="20:00:10" class="periodBg2" style="background: url(//placeimg.com/200/200/arch);  background-size: cover;">
+          <period fill></period>
+          <hour></hour>
+          <minute></minute>
+          <second></second>
+        </clock>
+      </section>
+      
+      <style>
+        clock[period="am"].periodBg period { background: yellow; }
+        clock[period="pm"].periodBg period { background: blue; }
+
+        clock[period="am"].periodBg2 period { background: linear-gradient(rgba(255,255,255, .7), rgba(255,255,255, .7)); }
+        clock[period="pm"].periodBg2 period { background: linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7)); }
+        clock[period="pm"].periodBg2 hour,
+        clock[period="pm"].periodBg2 minute { background-color: silver; }
+      </style>
+    </article>
+
+    <header>Using javascript to trigger, leaving out some clock markup</header>
+
+    <clock id="no1" style="border: 2px solid green;">
+      <!-- period am="AM" pm="PM"></period -->
+      <hour></hour>
+      <minute></minute>
+      <!-- second></second --> 
+    </clock>
+    <script>$(function() { $('#no1').clock(); });</script>
+
+    <clock autostart style="border: 2px solid yellow; width: 100px; height: 100px;">
+      <!-- period am="AM" pm="PM"></period -->
+      <!-- hour></hour -->
+      <!-- minute></minute -->
+      <second></second> 
+    </clock>
+
+    <clock autostart>
+      <period am="AM" pm="PM"></period>
+      <!-- hour></hour -->
+      <!-- minute></minute -->
+      <!-- second></second --> 
+    </clock>
+
+
+    <header>Timezones, current time</header>
+
+    <clock autostart timezone="Australia/Sydney">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock autostart timezone="Europe/Berlin">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+
+    <header>Manually setting the time by attribute (modify it by setting timezone as well)</header>
+
+    <clock time>
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock time="10:11:12">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <clock time="17:04:55">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <!-- current time translated to the target timezone 5 o'clock results in 2 o'clock -->
+    <clock time="17:04:55" timezone="Australia/Sydney">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+
+    <header>code free clock, with all required markup</header>
+
+    <clock period="am"> <!--  center=""> -->
+      <period>AM</period>
+      <hour style="transform: rotateZ(112deg);"></hour>
+      <minute style="transform: rotateZ(3deg);"></minute>
+      <second style="transform: rotateZ(60deg);"></second>
+      <!--center></center -->
+    </clock>
+
+    <header>Manually setting the clock</header>
+
+    <clock id="no2">
+      <hour></hour>
+      <minute></minute>
+      <second></second>
+    </clock>
+
+    <nav>
+      <button onclick="$('#no2').clock(new Date);">set now</button>
+      <button onclick="$('#no2').clock('14:59:59');">set 14:59:59</button>
+      <button onclick="$('#no2').clock('15:00:00');">set 15:00:00</button>
+      <button onclick="$('#no2').clock('15:12:10');">set 15:12:10</button>
+    </nav>
+    <nav>
+      <button onclick="$('#no2').clock();">update local</button>
+      <button onclick="$('#no2').clock(undefined, 'Europe/Berlin');">update 'Europe/Berlin'</button>
+      <button onclick="$('#no2').clock(undefined, 'Australia/Sydney');">update 'Australia/Sydney'</button>
+      <br>
+      <button onclick="$('#no2').clock().stop();">update stop</button>
+      <button onclick="$('#no2').clockStop();">update stop (2)</button>
+    </nav>
+    <nav>
+      <button onclick="$('#no2').clock(new Date, 'Europe/Berlin');">set 'Europe/Berlin'</button>
+      <button onclick="$('#no2').clock(new Date, 'Asia/Jakarta');">set 'Asia/Jakarta'</button>
+      <button onclick="$('#no2').clock(new Date, 'America/New_York');">set 'America/New_York'</button>
+      <button onclick="$('#no2').clock(new Date, 'Asia/Kolkata');">set 'Asia/Kolkata'</button>
+      <button onclick="$('#no2').clock(new Date, 'Australia/Sydney');">set 'Australia/Sydney'</button>
+      <button onclick="$('#no2').clock(new Date, 'Europe/Madrid');">set 'Europe/Madrid'</button>
+    </nav>
+
+
+    <!-- set console debug output -->
+    <script> $.DEBUG_clock = false; </script>
+
+
+    <!-- placed here, so the CSS tab contains clock-css only -->
+    <style>
+      @import url('//fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+      body {padding: 0 1em 1em; font-family: 'Roboto', sans-serif;}
+      header {display: block; margin: 2em 0;}
+      nav {display: inline-block; vertical-align: top; padding: 0 1em;}
+      nav button {display: block; margin: 0 0 .4em 0;}
+      section {display: inline-block;}
+      section > * {display: block; margin: 0; text-align: center;}
+      article {margin-bottom: 10em;}
+      article > section {margin-right: 2em;}
+      article > section > header {font-weight: 100; font-size: x-large; margin-bottom: .5em;}
+    </style>
+
+  </body>
+</html>
