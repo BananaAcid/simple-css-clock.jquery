@@ -56,41 +56,41 @@ to rotate: 6 deg for each minute or second, 30 deg for each hour.
 
 ## Markup hirachy
 leave out, what you do not want to be shown
-- `<clock>`{:.html}
+- `<clock>`
     + Attr: `center=""`         set a center spot and use the param if used - for its  style see `clock[center]:after`
     + Attr: `time=""`           set the time to show on the clock
     + Attr: `timezone=""`       set the timezone to convert time to
 
-	1. `<period>`{:.html}
+	1. `<period>`
 	    + Attr: `am="AM" / pm="PM"`           the am or pm text to show (ideas: you could leave both empty, if you want to use fill anyways - or just set one.)
-	    + Prop: `fill`              to fill the background to be used as image holder (use `period[is="am"] {background:...}`{:.css} )
+	    + Prop: `fill`              to fill the background to be used as image holder (use `period[is="am"] {background:...}` )
 
-	2. `<hour>`{:.html}
-	3. `<minute>`{:.html}
-	4. `<second>`{:.html}
-	5. `<center>`{:.html}
+	2. `<hour>`
+	3. `<minute>`
+	4. `<second>`
+	5. `<center>`
 
 ## jQuery commands
 - `$(elem).clock()` to make it run with the current time
 - Use the attribute `autostart` on the clock elem to make it start on domready. 
-- Use the attribute `center` to overlay a center spot (use `center="?"` to add an icon within the spot). You may also use the `<center>`{:.html} tag.
+- Use the attribute `center` to overlay a center spot (use `center="?"` to add an icon within the spot). You may also use the `<center>` tag.
 - Use the attribute `time="10:11:12"` to manually set the time (it will not progress).
    - using `time` or `time=""` or `time="now"` will result in the current time.
 - Use the attribute `timezone="Australia/Sydney"` to manually set the timezone.
    - the time will be modified by timezone before displaying.
 
-- `$(elem).clock('09:12:45');`{:.js} to set it to a specific time.
-- `$(elem).clock('09:12:45', 'Australia/Sydney');`{:.js} to set it to a specific time and timezone.
-- `$(elem).clock(undefined, 'Australia/Sydney');`{:.js} to set it to a specific timezone only.
-- `$(elem).clock(new Date);`{:.js}   to pass a date object and set it to a specific time
+- `$(elem).clock('09:12:45');` to set it to a specific time.
+- `$(elem).clock('09:12:45', 'Australia/Sydney');` to set it to a specific time and timezone.
+- `$(elem).clock(undefined, 'Australia/Sydney');` to set it to a specific timezone only.
+- `$(elem).clock(new Date);`   to pass a date object and set it to a specific time
 
-- `$(elem).clock().stop();`{:.js} to stop the selected clocks
-- `$(elem).clockStop();`{:.js}    to stop the selected clocks
+- `$(elem).clock().stop();` to stop the selected clocks
+- `$(elem).clockStop();`    to stop the selected clocks
 
-- `var dateOfClock = $(elem).clock().date();`{:.js}  to get the first clock's date object
-- `var dateOfClock = $(elem).clockDate();`{:.js}     to get the first clock's date object
+- `var dateOfClock = $(elem).clock().date();`  to get the first clock's date object
+- `var dateOfClock = $(elem).clockDate();`     to get the first clock's date object
 
-- `$.DEBUG_clock = true;`{:.js} to enable debug logging
+- `$.DEBUG_clock = true;` to enable debug logging
 
 ## Style
 
@@ -109,7 +109,7 @@ leave out, what you do not want to be shown
 
     - background-color        for a box around AM/PM
 
-... `clock[period="am"]`{:.css} will be set for styling by jQuery
+... `clock[period="am"]` will be set for styling by jQuery
 
 ### center, clock[center]:after {}
 
@@ -120,4 +120,4 @@ leave out, what you do not want to be shown
     - line-height             for the vertical alignment - should match the px height of min-height if used
     - color                   for the icon color
 
-`<center>`{:.html} will be overlapped in the html view hirachy by `<clock center="">`{:.html} - so both could be used for a more complex styling.
+`<center>` will be overlapped in the html view hirachy by `<clock center="">` - so both could be used for a more complex styling.
